@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Pattaya';
+  src: url('/public/fonts/Pattaya/Pattaya-Regular.ttf');
+} 
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+/* *{
+  background: rgba(32, 178, 171, 0.087);
+} */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(180, 180, 208);
+  opacity: 0.5;
+  border-radius: 1rem;
+  transition: all 0.2s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: royalblue;
+  opacity: 1;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery .images {
+  gap: 15px;
+  max-width: 95%;
+  margin-top: 40px;
+  columns: 5 340px;
+  list-style: none;
+}
+
+.gallery .images .card {
+  display: flex;
+  /* cursor: pointer; */
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 14px;
+  /* border-radius: 4px; */
+}
+
+.gallery .images img {
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.images .details {
+  /* position: absolute; */
+  z-index: 4;
+  /* bottom: -100px; */
+  /* transition: bottom 0.1s ease; */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.images li:hover .details {
+  bottom: 0;
+}
+
+@media screen and (max-width: 688px) {
+  .gallery .images {
+    max-width: 100%;
+    padding: 0 13px;
+    margin-top: 20px;
+  }
+}
+
